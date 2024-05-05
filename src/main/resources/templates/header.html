@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header class="header" th:fragment="header">
+        <div class="logo">
+            <img src="/resources/images/logo.png" height="70px" width="70px">
+        </div>
+        <div>
+            <a href="/" style="text-decoration: none; color: rgb(116, 48, 129);">
+                <h1 id="head-2" sec:authorize="isAuthenticated()">WonderFlower</h1>
+                <h1 id="head-1" sec:authorize="isAnonymous()">WonderFlower</h1>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li sec:authorize="isAuthenticated()">
+                    <button class="btn4" onclick="redirectToLink(this)">
+                        <a href="/catalog">Каталог</a>
+                    </button>
+                </li>
+                <li sec:authorize="isAuthenticated()">
+                    <button class="btn4" onclick="redirectToLink(this)">
+                        <a href="/account">Учетная запись</a>
+                    </button>
+                </li>
+
+                <li sec:authorize="isAnonymous()">
+                    <button class="btn4" onclick="redirectToLink(this)">
+                        <a href="/login">Вход</a>
+                    </button>
+                </li>
+                <li sec:authorize="isAnonymous()">
+                    <button class="btn4" onclick="redirectToLink(this)">
+                        <a href="/register">Регистрация</a>
+                    </button>
+                </li>
+            </ul>
+            <script>
+                function redirectToLink(button) {
+                    var link = button.querySelector('a');
+                    if (link) {
+                        window.location.href = link.href;
+                    }
+                }
+            </script>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,86 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 10px 169px 10px;
+    flex-direction: column;
+}
+.namespace {
+    display: flex; 
+    justify-content: center;
+}
+.namespace h1 {
+    margin-bottom: 30px;
+}
+
+.container {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.product h2{
+    font-size: 22px;
+    padding: 5px 0 14px 0;
+}
+.product {
+    grid-template-rows: 250px 230px 50px 45px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    display: grid;
+    width: 270px;
+    padding: 20px;
+    border: 1px solid #303035;
+    border-radius: 10px;
+    text-align: center;
+}
+.cart {
+    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+.create-order {
+    margin-top: 30px;
+}
+
+#cart-items {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 20px;
+    list-style: none;
+}
+#cart-items {
+    gap: 10px;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    display: grid;
+    list-style: none;
+}
+.quantity-controls button {
+    background: rgb(116, 48, 129);
+    color: #fff;
+    border: none;
+    font-size: medium;
+    padding: 1px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 7px;
+}
+
+#productName {
+    margin-bottom: 20px;
+}

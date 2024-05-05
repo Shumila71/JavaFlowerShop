@@ -1,0 +1,17 @@
+h2 {
+    margin-bottom: 10px;
+}
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+.order-item {
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    margin: 305px 300px 250px 300px;
+    align-items: center;
+    flex-direction: column;
+}
